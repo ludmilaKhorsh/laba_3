@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="text_name">Имя: Антон</string>
+    <string name="text_age">Возраст: 52</string>
+    <string name="text_spec">Специальность: Разработчик</string>
+    <string name="text_photo">Фото</string>
+    <string name="text_project">Проекты</string>
+    <string name="text_achivements">Достижения</string>
+</resources>
