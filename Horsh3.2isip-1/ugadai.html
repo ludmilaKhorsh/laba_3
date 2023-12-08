@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section class="sect-1">  
+        <a href="index.html"><h1 class="h1-btn">Главная</h1></a>
+        <a href="index2.html"> <h1 class="h1-btn-1">Калькулятор</h1></a> 
+        <a href="ugadai.html"><h1 class="h1-btn-2">Угадайка</h1></a>
+</section>
+    <div class="container">
+        <div class="canvas">
+            <div class="desc">
+                <h1 class="desc__title">Игра: угадай число</h1>
+                <p class="desc__subtitle">
+                    Компьютер загадал число от 1 до 100. Ваша задача его угадать.
+                </p>
+            </div>
+            <div class="field">
+                <label for="" class="filed__form__label">Ваше число: </label>
+                <input type="text" class="field__form__input" />
+                <button class="field__form__btn">Проверить</button>
+            </div>
+            <div class="result">
+                <div class="result__check">
+                    <span class="result__check__label">Результат:</span>
+                    <span class="result__check__out"></span>
+                </div>
+                <div class="result__help">
+                    <span class="result__help">Подсказка:</span>
+                    <span class="result__help__out"></span>
+                </div>
+                <div class="result__count">
+                    <span class="result__count__label">Число попыток:</span>
+                    <span class="result__count__out"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div>
+        <script>
+            let input = document.querySelector(".field__form__input");
+            let btn = document.querySelector(".field__form__btn");
+            let check = document.querySelector(".result__check__out");
+            let help = document.querySelector(".result__help__out");
+            let count = document.querySelector(".result__count__out");
+
+            let item = 0;
+            let randNum = 1 + Math.floor(Math.random() * 100);
+            let userNum;
+
+            btn.onclick = function(evt) {
+                evt.preventDefault();
+                userNum = input.value;
+                console.log(userNum, randNum);
+                if (userNum > randNum) {
+                    check.textContent = "Пока что не угадали";
+                    help.textContent = "Много";
+                    item++;
+                    count.textContent = item;
+                } else if (userNum < randNum) {
+                    check.textContent = "Пока что не угадали";
+                    help.textContent = "Мало";
+                    item++;
+                    count.textContent = item;
+                } else {
+                    check.textContent = "Поздравляю! Вы угадали число";
+                    help.textContent = "В точку!";
+                    item++;
+                    count.textContent = item;
+                }
+            };
+        </script>
+    </div>
+</body>
+</html>

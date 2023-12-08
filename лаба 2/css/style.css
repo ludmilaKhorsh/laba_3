@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+   }
+   h1 {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px;
+    margin: 0;
+   }
+   #app {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+   form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+   }
+   input[type="text"],
+   input[type="date"],
+   input[type="time"],
+   select {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    min-width: 150px;
+   }
+   button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.1s; /* Добавляем плавную анимацию при изменении тени */
+   }
+   /* Стили для кнопки при наведении */
+   button:hover {
+    box-shadow: 0 0 5px rgb(0, 0, 0); /* Добавляем тень при наведении */
+   }
+   ul {
+    list-style: none;
+    padding: 0;
+   }
+   li {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+   }
+   li button {
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   /* Стили для каждой задачи */
+   .task {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+   }
+   /* Стили для просроченных задач */
+   .task.overdue {
+    background-color: #ffe7e7; /* Красный фон для просроченных задач */
+   }
+   /* Стили для сегодняшних задач */
+   .task.today {
+    background-color: #e7ffe7; /* Зеленый фон для сегодняшних задач */
+   }
